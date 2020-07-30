@@ -1,0 +1,9 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%gradient-background--primary {
+  background-image: linear-gradient(135deg, rgba(#0669ac, 1), rgba(#149bf1, 1));
+}

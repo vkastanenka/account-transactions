@@ -1,0 +1,16 @@
+.account {
+  &__links {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin: 0 2rem;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    @extend %flex-center;
+    flex-direction: column;
+  }
+}

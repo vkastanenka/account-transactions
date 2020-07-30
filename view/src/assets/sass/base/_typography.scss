@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+body {
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  color: $color-grey-dark-3;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+  backface-visibility: hidden;
+
+  &--spans > * {
+    display: block;
+  }
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 0.15rem;
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-primary {
+  font-size: 1.6rem;
+}
+
+.fw-medium {
+  font-weight: 400 !important;
+}
+
+.heading-active {
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

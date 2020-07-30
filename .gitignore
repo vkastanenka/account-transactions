@@ -1,0 +1,4 @@
+/node_modules
+/config.env
+/view/node_modules
+/view/src/assets/node_modules

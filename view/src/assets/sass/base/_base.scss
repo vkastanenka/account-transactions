@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: border-box;
+
+  @include respond(bp-big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+
+  @include respond(bp-largest) {
+    font-size: 59.375%; // 1rem = 9.5px
+  }
+
+  @include respond(bp-larger) {
+    font-size: 56.25%; // 1rem = 9px;
+  }
+
+  @include respond(bp-large) {
+    font-size: 53.125%; // 1rem = 8.5px
+  }
+
+  @include respond(bp-medium) {
+    font-size: 50%; // 1rem = 8px
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient($color-primary-light, $color-primary);
+  @extend %flex-center;
+}
+
+::-moz-selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  transition: all 0.3s;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

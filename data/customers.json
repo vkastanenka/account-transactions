@@ -1,0 +1,60 @@
+{
+  "customers": {
+    "528": {
+      "load_history": {
+        "15880": {
+          "year": 2000,
+          "month": 0,
+          "week": 1,
+          "day": 1,
+          "load": {
+            "id": "15880",
+            "customer_id": "528",
+            "load_amount": "$5000.00",
+            "time": "2000-01-03T00:00:00Z"
+          },
+          "accepted": true
+        },
+        "15888": {
+          "year": 2000,
+          "month": 0,
+          "week": 1,
+          "day": 2,
+          "load": {
+            "id": "15888",
+            "customer_id": "528",
+            "load_amount": "$5000.00",
+            "time": "2000-01-03T00:02:00Z"
+          },
+          "accepted": true
+        },
+        "15889": {
+          "year": 2000,
+          "month": 0,
+          "week": 1,
+          "day": 3,
+          "load": {
+            "id": "15889",
+            "customer_id": "528",
+            "load_amount": "$5000.00",
+            "time": "2000-01-03T00:10:00Z"
+          },
+          "accepted": true
+        },
+        "15891": {
+          "year": 2000,
+          "month": 0,
+          "week": 1,
+          "day": 4,
+          "load": {
+            "id": "15891",
+            "customer_id": "528",
+            "load_amount": "$4000.00",
+            "time": "2000-01-03T00:15:00Z"
+          },
+          "accepted": true
+        }
+      }
+    }
+  }
+}

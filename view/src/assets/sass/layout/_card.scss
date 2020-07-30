@@ -1,0 +1,16 @@
+.card {
+  background-color: $color-white;
+  width: 80vw;
+  height: 85vh;
+  @extend %flex-center;
+  flex-direction: column;
+  box-shadow: $box-shadow--3;
+  position: relative;
+  padding: 5rem;
+
+  &__link {
+    position: absolute;
+    top: 5rem;
+    right: 8rem;
+  }
+}

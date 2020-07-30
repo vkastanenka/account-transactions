@@ -1,0 +1,7 @@
+.landing {
+  &__authenticate-links {
+    & > * {
+      margin: 0 2rem;
+    }
+  }
+}
