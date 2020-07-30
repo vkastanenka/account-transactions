@@ -1,5 +1,4 @@
 const path = require("path");
-const morgan = require("morgan");
 const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
@@ -14,11 +13,6 @@ const app = express();
 
 // Serving static files
 app.use(express.static(path.join(__dirname, "view/build")));
-
-// Development logging
-if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
-}
 
 // Implementing CORS
 app.use(function (req, res, next) {
