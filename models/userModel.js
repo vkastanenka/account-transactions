@@ -41,16 +41,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-//////////////////////
-// Virtual Properties
-
-// userSchema.virtual('account_history', {
-//   ref: "Transaction",
-//   localField: "_id",
-//   foreignField: "customer_id",
-//   justOne: false
-// })
-
 ///////////////////////
 // Document Middleware
 

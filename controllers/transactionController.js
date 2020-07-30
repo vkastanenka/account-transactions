@@ -1,30 +1,14 @@
 // Utilities
-const fs = require("fs");
-const path = require("path");
 const dateUtils = require("../utils/dates");
-const currency = require("../utils/currency");
 const transRes = require("../utils/transResponses");
-const writeFiles = require("../utils/writeFiles");
 const writeDocuments = require("../utils/writeDocuments");
 const transCheckUtils = require("../utils/transChecks");
-const customerUtils = require("../utils/customers");
 
 // Error Handling
 const catchAsync = require("../utils/catchAsync");
 
 // Validation
 const validateTransaction = require("../validation/transactions/transaction");
-
-// // Data paths
-// const inputPath = path.join(__dirname, "../data/input.txt");
-// const outputPath = path.join(__dirname, "../data/output.txt");
-// const customersPath = path.join(__dirname, "../data/customers.json");
-
-// // Obtain string of output file
-// const currentOutput = fs.readFileSync(outputPath, "utf-8");
-
-// // Obtain customers object
-// const customers = JSON.parse(fs.readFileSync(customersPath, "utf-8")).customers;
 
 // Models
 const Account = require("../models/accountModel");
@@ -38,8 +22,6 @@ const User = require("../models/userModel");
 // @desc    Tests transactions route
 // @access  Public
 exports.test = (req, res, next) => {
-  const date = new Date();
-  console.log(date.toISOString());
   return res.status(200).json({ message: "Transactions route secured!" });
 };
 
@@ -193,8 +175,6 @@ exports.deposit = catchAsync(async (req, res, next) => {
 // @desc    Withdraws a requested amount
 // @access  Protected
 exports.withdraw = catchAsync(async (req, res, next) => {
-  let user;
-
   // Validate inputs
   const { err, isValid } = validateTransaction(req.body);
   if (!isValid) return res.status(400).json(err);
@@ -315,7 +295,7 @@ exports.withdraw = catchAsync(async (req, res, next) => {
   );
 
   // Update user JWT and send with response
-  user = await User.findById(req.user._id).populate("account");
+  const user = await User.findById(req.user._id).populate("account");
   const token = createJWT(user);
 
   // Respond
